@@ -7,6 +7,9 @@ function update_time() {
   ss = ss % 60;
   mm = mm % 60;
   hh = hh % 24;
+  ss = String(ss).padStart(2, '0');
+  mm = String(mm).padStart(2, '0');
+  hh = String(hh).padStart(2, '0');
   document.getElementById("text-0000000f").value = hh + ":" + mm + ":" + ss;
 }
 setInterval(update_time,1000);
